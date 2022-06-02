@@ -1,0 +1,1694 @@
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:44:51 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.7ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.4ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.5ms)
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCars (20170917002511)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar, "manufacturer" varchar, "number" varchar, "rate" varchar, "style" varchar, "location" varchar, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170917002511"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBookings (20170917003758)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "return_time" datetime, "pickup_time" datetime, "user_id" integer, "car_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookings_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookings_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_bookings_on_car_id" ON "bookings" ("car_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170917003758"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20170917192725)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170917192725"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRoleToUsers (20170920024420)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170920024420"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStatusToBookings (20170927182735)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "bookings" ADD "status" integer[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170927182735"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveStatusFromCars (20170927182952)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar, "manufacturer" varchar, "number" varchar, "rate" varchar, "style" varchar, "location" varchar, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acars" ("id","model","manufacturer","number","rate","style","location","status","created_at","updated_at")
+                     SELECT "id","model","manufacturer","number","rate","style","location","status","created_at","updated_at" FROM "cars"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "cars"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar, "manufacturer" varchar, "number" varchar, "rate" varchar, "style" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "cars" ("id","model","manufacturer","number","rate","style","location","created_at","updated_at")
+                     SELECT "id","model","manufacturer","number","rate","style","location","created_at","updated_at" FROM "acars"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "acars"[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170927182952"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-02 06:45:19.248772"], ["updated_at", "2022-06-02 06:45:19.248772"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookings_on_car_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookings_on_car_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookings_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookings_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:45:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 2175ms (Views: 2167.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_up" for 127.0.0.1 at 2022-06-02 07:51:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (35.7ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 86ms (Views: 61.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/d/users" for 127.0.0.1 at 2022-06-02 07:52:12 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fWwpdnkqCOBwpkgUC39aZAhr2ZgeU/8jSol2TKTNA02ncchika1ONjd/kINS08/J65Ba4m0vR6u8fdl9L3s/Q==", "user"=>{"name"=>"salma", "email"=>"yd@lensens.ma", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yd@lensens.ma"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "salma"], ["email", "yd@lensens.ma"], ["encrypted_password", "$2a$11$0ksz2XmucZ.0zTz8kyr3u.JbL2nvIIqSbmuUgZHtC8aIWKJVVamqW"], ["role", 0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2022-06-02 06:52:12.213095"], ["last_sign_in_at", "2022-06-02 06:52:12.213095"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 164ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:52:12 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 07:52:14 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.3ms)
+  Rendered cars/index.html.erb within layouts/application (5.2ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 42ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=bmw&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 07:52:45 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"bmw", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%bmw%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.8ms)
+  Rendered cars/index.html.erb within layouts/application (3.5ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:52:48 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 07:52:49 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (3.3ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:52:52 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 07:52:53 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (3.0ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:56:33 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.3ms)
+  Rendered cars/index.html.erb within layouts/application (4.7ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 41.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:56:35 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.4ms)
+  Rendered cars/index.html.erb within layouts/application (4.7ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:56:35 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.9ms)
+  Rendered cars/index.html.erb within layouts/application (3.8ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:56:36 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.3ms)
+  Rendered cars/index.html.erb within layouts/application (4.6ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:37 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:43 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:45 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:45 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+  Rendered users/_admin_menu.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:56:47 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:56:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/d/users/edit" for 127.0.0.1 at 2022-06-02 07:56:54 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (3.0ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/d/users/sign_out" for 127.0.0.1 at 2022-06-02 07:56:58 +0100
+  
+SyntaxError (/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+):
+  
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `block in load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:663:in `new_constants_in'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:477:in `load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+activesupport (5.0.7.2) lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:358:in `require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:584:in `get'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:615:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.9ms)
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:57:27 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:57:28 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.6ms)
+  Rendered layouts/_navbar.html.erb (3.6ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:57:33 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:57:33 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:57:34 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:57:35 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:57:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 07:57:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 07:58:35 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.4ms)
+  Rendered cars/index.html.erb within layouts/application (5.5ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:58:43 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.1ms)
+  Rendered cars/index.html.erb within layouts/application (4.4ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:58:46 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.5ms)
+  Rendered layouts/_navbar.html.erb (3.0ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=crv&q%5Bmanufacturer_cont%5D=honda&q%5Bstyle_cont%5D=SUV&q%5Blocation_cont%5D=raleigh&commit=Search" for 127.0.0.1 at 2022-06-02 07:58:51 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"crv", "manufacturer_cont"=>"honda", "style_cont"=>"SUV", "location_cont"=>"raleigh"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%crv%' AND "cars"."manufacturer" LIKE '%honda%' AND "cars"."style" LIKE '%SUV%' AND "cars"."location" LIKE '%raleigh%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.7ms)
+  Rendered cars/index.html.erb within layouts/application (3.4ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/d/users/sign_out" for 127.0.0.1 at 2022-06-02 07:59:04 +0100
+  
+SyntaxError (/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+):
+  
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `block in load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:663:in `new_constants_in'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:477:in `load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+activesupport (5.0.7.2) lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:358:in `require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:584:in `get'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:615:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.5ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 07:59:21 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  Rendered users/booking.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.7ms)
+  Rendered layouts/_navbar.html.erb (5.8ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 08:03:24 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 29.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 08:03:26 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.8ms)
+  Rendered cars/index.html.erb within layouts/application (3.8ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 08:04:04 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.6ms)
+  Rendered cars/index.html.erb within layouts/application (2.8ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 47ms (Views: 30.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 08:04:06 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.9ms)
+  Rendered cars/index.html.erb within layouts/application (3.6ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 08:04:08 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.3ms)
+  Rendered cars/index.html.erb within layouts/application (4.5ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:04:39 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.1ms)
+  Rendered cars/index.html.erb within layouts/application (2.1ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 22.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:05:59 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (1.0ms)
+  Rendered cars/index.html.erb within layouts/application (2.1ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 20.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:06:01 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (4.8ms)
+  Rendered cars/index.html.erb within layouts/application (10.4ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=t&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:06:07 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"t", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ("cars"."model" LIKE '%t%')[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.2ms)
+  Rendered cars/index.html.erb within layouts/application (4.1ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:06:11 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.1ms)
+  Rendered cars/index.html.erb within layouts/application (4.7ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:07:46 +0100
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/_search.html.erb (2.6ms)
+  Rendered cars/index.html.erb within layouts/application (10.0ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 68ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amith@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "Amith"], ["email", "amith@abc.com"], ["encrypted_password", "$2a$11$Rwxbb8gypN6PAP36ZY9Ew.O8EfOmjIl6v/wx1mCEJSoqJiPXKdt3q"], ["role", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sadmin@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "SAdmin"], ["email", "sadmin@abc.com"], ["encrypted_password", "$2a$11$gnPPaDbjxEG31IUX4l3i7uT8KvxDX47ts0yQZYfvYHY5gkAzqy8/2"], ["role", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamal@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "kamal"], ["email", "kamal@abc.com"], ["encrypted_password", "$2a$11$TOZx/nxo/HTEY3Xe6bfFsOaFcZAhmP85s1lbm4kHMX0xd9MtE/Aeq"], ["role", 0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ybajori@ncsu.edu"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "Yash"], ["email", "ybajori@ncsu.edu"], ["encrypted_password", "$2a$11$2AwHm4SSHy15MEbDgOfm3.hq7.JgrGNrYInLxALdavjhtWUK7MwI."], ["role", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rachit.grwl9@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "Racs"], ["email", "rachit.grwl9@gmail.com"], ["encrypted_password", "$2a$11$itv1ww99nJUCwHhtB//QreAGHya76DknO3S53mGDXHDyVnGoFU7iK"], ["role", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ragarwa@ncsu.edu"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "role") VALUES (?, ?, ?, ?)[0m  [["name", "Rachit"], ["email", "ragarwa@ncsu.edu"], ["encrypted_password", "$2a$11$TjKRH3OQ4xJgZso1Ssur9OR2y9LFFIwZMm5BvGbxYwztQqlbOhSDS"], ["role", 0]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "123"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "crv"], ["manufacturer", "honda"], ["number", "123"], ["rate", "10"], ["style", "SUV"], ["location", "raleigh"], ["created_at", "2022-06-02 07:08:56.330356"], ["updated_at", "2022-06-02 07:08:56.330356"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "345"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "cruze"], ["manufacturer", "cheverlot"], ["number", "345"], ["rate", "15"], ["style", "Sedan"], ["location", "cary"], ["created_at", "2022-06-02 07:08:56.331515"], ["updated_at", "2022-06-02 07:08:56.331515"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "678"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "figo"], ["manufacturer", "ford"], ["number", "678"], ["rate", "08"], ["style", "Hatchback"], ["location", "cary"], ["created_at", "2022-06-02 07:08:56.332938"], ["updated_at", "2022-06-02 07:08:56.332938"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "321"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "city"], ["manufacturer", "honda"], ["number", "321"], ["rate", "12"], ["style", "Sedan"], ["location", "raleigh"], ["created_at", "2022-06-02 07:08:56.334538"], ["updated_at", "2022-06-02 07:08:56.334538"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "888"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "a4"], ["manufacturer", "audi"], ["number", "888"], ["rate", "24"], ["style", "Sedan"], ["location", "durham"], ["created_at", "2022-06-02 07:08:56.335656"], ["updated_at", "2022-06-02 07:08:56.335656"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCar Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? LIMIT ?[0m  [["number", "777"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("model", "manufacturer", "number", "rate", "style", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["model", "q7"], ["manufacturer", "audi"], ["number", "777"], ["rate", "25"], ["style", "SUV"], ["location", "durham"], ["created_at", "2022-06-02 07:08:56.337124"], ["updated_at", "2022-06-02 07:08:56.337124"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/cars?utf8=%E2%9C%93&q%5Bmodel_cont%5D=&q%5Bmanufacturer_cont%5D=&q%5Bstyle_cont%5D=&q%5Blocation_cont%5D=&commit=Search" for 127.0.0.1 at 2022-06-02 08:09:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CarsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"model_cont"=>"", "manufacturer_cont"=>"", "style_cont"=>"", "location_cont"=>""}, "commit"=>"Search"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 08:09:16' AND return_time >=  '2022-06-02 08:09:16')[0m
+  Rendered cars/_search.html.erb (6.8ms)
+  Rendered cars/index.html.erb within layouts/application (9.0ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 174ms (Views: 139.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/d/users/sign_out" for 127.0.0.1 at 2022-06-02 08:09:26 +0100
+  
+SyntaxError (/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+):
+  
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `block in load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:663:in `new_constants_in'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:477:in `load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+activesupport (5.0.7.2) lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:358:in `require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:584:in `get'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:615:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+Started GET "/" for 127.0.0.1 at 2022-06-02 08:12:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 124ms (Views: 115.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 08:12:25 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 08:12:25' AND return_time >=  '2022-06-02 08:12:25')[0m
+  Rendered cars/_search.html.erb (3.9ms)
+  Rendered cars/index.html.erb within layouts/application (5.7ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 22.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/d/users/sign_out" for 127.0.0.1 at 2022-06-02 08:12:29 +0100
+  
+SyntaxError (/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+/Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.3.0/app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+):
+  
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '{', expecting `end'
+...ion only: [:create, :destroy] { request.env["devise.skip_tim...
+...                              ^
+devise (4.3.0) app/controllers/devise/sessions_controller.rb:5: syntax error, unexpected '}', expecting `end'
+..."devise.skip_timeout"] = true }
+...                              ^
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:478:in `block in load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:663:in `new_constants_in'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:477:in `load_file'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+activesupport (5.0.7.2) lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+activesupport (5.0.7.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:358:in `require_or_load'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:270:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:584:in `get'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:615:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendering /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.6ms)
+Started DELETE "/d/users/sign_out" for 127.0.0.1 at 2022-06-02 08:13:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HpVTfEfHuzVTBLmPGuR8GVmpSFop31z4877cRcIJoLfTHRUMeA0YbltiQX4+x6qs5NYhuVseZlORXD3CBZLDAg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 08:13:40 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  Rendered users/_admin_menu.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 137ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 08:59:44 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 56ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_up" for 127.0.0.1 at 2022-06-02 08:59:52 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_users_registrations_new_html_erb__3348352404580478328_21300 at /Users/salmakhattabi/Desktop/Escelera-master/app/views/users/registrations/new.html.erb:4)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (17.0ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users" for 127.0.0.1 at 2022-06-02 09:00:06 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NblmE+CYT51UU4nWVuhct6gmMuk/MM3Ikkc2P9zPse4MJ+R/vpApxnBXEgZtgfSPQA77H5Q+xnXprHozP9cYzQ==", "user"=>{"name"=>"salma", "email"=>"yd@lensens.ma", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (3.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yd@lensens.ma"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_users_registrations_new_html_erb__3348352404580478328_21460 at /Users/salmakhattabi/Desktop/Escelera-master/app/views/users/registrations/new.html.erb:4)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /Users/salmakhattabi/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (2.6ms)
+  Rendered users/_admin_menu.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 183ms (Views: 14.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/d/users/sign_in" for 127.0.0.1 at 2022-06-02 09:00:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for 127.0.0.1 at 2022-06-02 09:00:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fONlaGO2d57QRtYx6YxWmXHeJEHtR07xAdFPu+67ZoQ9ghylXghFIRW5QRrrSbuAcVj9evHGQxse4YqBhD84Sg==", "user"=>{"email"=>"yd@lensens.ma", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yd@lensens.ma"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 161ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fONlaGO2d57QRtYx6YxWmXHeJEHtR07xAdFPu+67ZoQ9ghylXghFIRW5QRrrSbuAcVj9evHGQxse4YqBhD84Sg==", "user"=>{"email"=>"yd@lensens.ma", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered users/_admin_menu.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 144ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for 127.0.0.1 at 2022-06-02 09:00:23 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SlcIbiPwx9h27Z+GGFKFI6fbG1jnYuXX+KW7NfRg2CBz78wEf7b29BritzyIN8g1ik6jwERZ1tRJLgblUG3rlQ==", "user"=>{"email"=>"yd@lensens.ma", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yd@lensens.ma"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2022-06-02 08:00:23.964365"], ["sign_in_count", 2], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 166ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:00:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Rendered users/_admin_menu.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:00:25 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:00:25' AND return_time >=  '2022-06-02 09:00:25')[0m
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (4.3ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 52ms (Views: 33.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:02:47 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:47' AND return_time >=  '2022-06-02 09:02:47')[0m
+  Rendered cars/_search.html.erb (2.5ms)
+  Rendered cars/index.html.erb within layouts/application (6.6ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 52ms (Views: 40.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:02:48 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:02:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:02:52 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:52' AND return_time >=  '2022-06-02 09:02:52')[0m
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (3.9ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:02:55 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:02:55' AND return_time >=  '2022-06-02 09:02:55')[0m
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (4.4ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/1/bookings/new" for 127.0.0.1 at 2022-06-02 09:02:58 +0100
+Processing by BookingsController#new as HTML
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", 0]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/new.html.erb within layouts/application (2.9ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 42ms (Views: 26.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/cars/1/bookings" for 127.0.0.1 at 2022-06-02 09:03:09 +0100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R2mqXxNaD+IWYfYlAfUfzr6g1mZHV7xprk60HHtUu3XNtYcIuWgFlA7iuuD9+W2yY196Hq8kpaVEvXVKmKfoCQ==", "booking"=>{"pickup_time"=>"2022-06-09 09:02", "return_time"=>"2022/06/17 09:03"}, "commit"=>"Create Booking", "car_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", 0]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE ((pickup_time > '2022-06-09 09:02:00' and return_time < '2022-06-09 09:02:00') OR (pickup_time > '2022-06-17 09:03:00' and return_time < '2022-06-17 09:03:00'))[0m
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/new.html.erb within layouts/application (2.8ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cars/1/bookings" for 127.0.0.1 at 2022-06-02 09:03:31 +0100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JgZn8UqcVPD0xCXe0BFmKyN1YoOiaif83aczXwhfFsdsbXCUxQb5KSccEFx/6Hw4X6LJ0a8wEkhnGMPYJllsfg==", "booking"=>{"pickup_time"=>"2022-06-09 09:02", "return_time"=>"2022/06/14 09:03"}, "commit"=>"Create Booking", "car_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", 0]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE ((pickup_time > '2022-06-09 09:02:00' and return_time < '2022-06-09 09:02:00') OR (pickup_time > '2022-06-14 09:03:00' and return_time < '2022-06-14 09:03:00'))[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bookings" ("return_time", "pickup_time", "user_id", "car_id", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["return_time", "2022-06-14 09:03:00"], ["pickup_time", "2022-06-09 09:02:00"], ["user_id", 1], ["car_id", 1], ["created_at", "2022-06-02 08:03:31.419664"], ["updated_at", "2022-06-02 08:03:31.419664"], ["status", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users/1/bookings
+Completed 302 Found in 24ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/bookings" for 127.0.0.1 at 2022-06-02 09:03:31 +0100
+Processing by UsersController#booking as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" INNER JOIN "cars" ON "cars"."id" = "bookings"."car_id" WHERE "bookings"."user_id" = ? ORDER BY "bookings"."created_at" DESC[0m  [["user_id", 1]]
+  Rendering users/booking.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/booking.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_admin_menu.html.erb (1.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings/1/cancel" for 127.0.0.1 at 2022-06-02 09:03:39 +0100
+Processing by BookingsController#cancel as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:03:39 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:04:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:04:25 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:25' AND return_time >=  '2022-06-02 09:04:25')[0m
+  Rendered cars/_search.html.erb (2.6ms)
+  Rendered cars/index.html.erb within layouts/application (6.1ms)
+  Rendered users/_admin_menu.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (4.8ms)
+Completed 200 OK in 60ms (Views: 52.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:04:28 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:28' AND return_time >=  '2022-06-02 09:04:28')[0m
+  Rendered cars/_search.html.erb (3.5ms)
+  Rendered cars/index.html.erb within layouts/application (8.4ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 87ms (Views: 78.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:04:29 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:04:29' AND return_time >=  '2022-06-02 09:04:29')[0m
+  Rendered cars/_search.html.erb (1.5ms)
+  Rendered cars/index.html.erb within layouts/application (3.9ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 39ms (Views: 32.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:05:31 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:05:31' AND return_time >=  '2022-06-02 09:05:31')[0m
+  Rendered cars/_search.html.erb (2.1ms)
+  Rendered cars/index.html.erb within layouts/application (11.0ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 54ms (Views: 41.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:10:20 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:10:20' AND return_time >=  '2022-06-02 09:10:20')[0m
+  Rendered cars/_search.html.erb (13.0ms)
+  Rendered cars/index.html.erb within layouts/application (17.2ms)
+  Rendered users/_admin_menu.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 55ms (Views: 42.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-02 09:20:04 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  Rendered users/_admin_menu.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (3.1ms)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-06-02 09:20:06 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /Users/salmakhattabi/Desktop/Escelera-master/app/controllers/cars_controller.rb:61)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND ("bookings"."status" != ?)[0m  [["user_id", 1], ["status", 3]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 1 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 2 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 3 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 4 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 5 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06') LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (car_id = 6 AND pickup_time <= '2022-06-02 09:20:06' AND return_time >=  '2022-06-02 09:20:06')[0m
+  Rendered cars/_search.html.erb (2.6ms)
+  Rendered cars/index.html.erb within layouts/application (6.8ms)
+  Rendered users/_admin_menu.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 48ms (Views: 38.5ms | ActiveRecord: 1.7ms)
+
+

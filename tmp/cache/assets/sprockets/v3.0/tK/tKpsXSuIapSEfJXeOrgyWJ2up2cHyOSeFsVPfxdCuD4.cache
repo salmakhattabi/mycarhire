@@ -1,0 +1,21 @@
+I"n(function() {
+  $('#start').datetimepicker();
+
+  $('#end').datetimepicker({
+    useCurrent: false
+  });
+
+  $("#start").on("dp.change", function(e) {
+    return $('#end').data("DateTimePicker").minDate(e.date);
+  });
+
+  return;
+
+  $("#end").on("dp.change", function(e) {
+    return $('#start').data("DateTimePicker").maxDate(e.date);
+  });
+
+  return;
+
+}).call(this);
+:ET
